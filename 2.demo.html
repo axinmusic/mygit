@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            padding: 20px;
+            margin: 20px;
+            /* 阴影 */
+            box-shadow: 0 0 10px #ccc;
+            /*  box-shadow 动画过渡 */
+            transition: all .3s;
+        }
+
+        .wrapper:focus-within {
+            box-shadow: 0 0 15px #333;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        {{message}}
+        <!-- <input type="text"> -->
+    </div>
+    <script>
+        new Vue({
+            el: '.wrapper',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
+</body>
+
+</html>

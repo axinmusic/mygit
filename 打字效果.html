@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100%;
+        height: 229px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* aspect-ratio: 1/1; */
+      }
+      span {
+        display: inline-block;
+        width: 21ch;
+        font: bold 200% Consolas, Monaco, monospace; /*等宽字体*/
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: 500;
+        border-right: 1px solid transparent;
+        animation: typing 8s steps(21), caret 0.5s steps(1) infinite;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+      }
+      @keyframes caret {
+        50% {
+          border-right-color: currentColor;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <span>黑马程序员~~~</span>
+    </div>
+  </body>
+</html>

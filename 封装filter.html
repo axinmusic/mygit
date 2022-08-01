@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  请实现filter函数，该函数功能如下：
+      //   const ret = [1, 2, 3, 4].filter((i) => {})
+      //   //输出结果：ret = [2,4];
+      //   console.log(ret)
+      //
+      const arr = [1, 2, 3, 4]
+
+      Array.prototype.Myfilter = function (fn) {
+        let ret = []
+        for (let i = 0; i < this.length; i++) {
+          if (fn(this[i], i, this)) {
+            ret.push(this[i])
+          }
+        }
+        return ret
+      }
+      //()
+
+      const newArr = arr.Myfilter(function (item, index, thisarr) {
+        console.log(thisarr)
+        return index === 1
+      })
+      console.log(newArr)
+    </script>
+  </body>
+</html>

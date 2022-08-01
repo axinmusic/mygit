@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      let obj1 = {
+        name: 'zz',
+        age: 18,
+      }
+      let obj2 = {}
+      let obj3 = {}
+      obj3 = obj2 = obj1
+
+      //
+      console.log(obj3)
+      obj3.name = 'yy'
+      console.log(obj3)
+      console.log(obj2)
+      console.log(obj1)
+
+      let obj4 = obj1
+      console.log(obj4)
+      obj4.name = 'kk'
+      console.log(obj4)
+      console.log(obj1)
+      console.log(obj3)
+      console.log(obj2)
+    </script>
+  </body>
+</html>
